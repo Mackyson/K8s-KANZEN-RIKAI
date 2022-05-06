@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx #Pod名
+  labels:
+    app: nginx #key,valueともに何でもよい。Serviceのselectorフィールドで再び登場する。
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest

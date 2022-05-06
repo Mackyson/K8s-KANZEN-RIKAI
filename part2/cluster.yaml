@@ -1,0 +1,10 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: hello-world #クラスタ名
+nodes: 
+  - role: control-plane
+  - role: worker
+    extraPortMappings:
+    - containerPort: 30001 #ServiceでNodePortとして開放するポート
+      hostPort: 8000 #ホスト向けに公開するポート
+      protocol: TCP
