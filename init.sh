@@ -9,6 +9,9 @@ curl -LO "https://storage.googleapis.com/kubernetes-release/release/"(curl -s ht
 
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.12.0/kind-linux-amd64
 
+chmod +x ./kind
+chmod +x ./kubectl
+
 mv ./kind ./kubectl ./bin
 
 export PATH=(pwd)"/bin:$PATH"
